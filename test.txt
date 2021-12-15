@@ -1,0 +1,17 @@
+{
+    "errorCode": "null",
+    "errorMessage": "null",
+    "payload": {
+      "actualShareholderData": [
+        {
+          "firstName": "Κώστας",
+          "lastName": "Παπαδόπουλος",
+          "nationality": "Ελληνική",
+          "votingRight": ["Ιδιοκτησίας", "Ψήφου"],
+          "placeOfBirth": "Αθήνα",
+          "percentage": ["50%", "50%"],
+          "dob": "05/1964"
+        }
+        ]
+    }
+}
