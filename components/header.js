@@ -10,6 +10,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import router from 'next/router';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+
 export default function header({ user, changeUserState }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const handleClick = (event) => {
@@ -27,12 +28,12 @@ export default function header({ user, changeUserState }) {
   return (
     <div style={{ flexGrow: 1 }}>
       <AppBar position="static" style={{ height: 95, marginBottom: '10%' }}>
-        <Toolbar style={{ height: 95 }}>
+        <Toolbar style={{ height: 95, backgroundColor: '#194b8c' }}>
           <span>
             <Typography variant="h6" noWrap>
               {'Welcome to '}
               <Link color="inherit" href="/">
-                <a style={{ textDecoration: 'none', color: 'white' }}>HarHub</a>
+                <a style={{ textDecoration: 'none', color: 'white' }}>One Stop Startup</a>
               </Link>
               {' '}
             </Typography>

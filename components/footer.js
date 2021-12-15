@@ -1,39 +1,38 @@
 import React from 'react';
-// import Image from 'material-ui-image'
 import {
-  Grid, Box, Typography,
+  Box, Typography, Container,
 } from '@material-ui/core';
 
-const pjson = require('../package.json');
-
-export default function appFooter() {
+export default function AppFooter() {
   return (
-    <Box
+    <footer
       style={{
-        backgroundColor: '#194b8c',
+        left: 0,
+        right: 0,
         bottom: 0,
-        maxWidth: '100%',
-        marginTop: 'calc(5% + 60px)',
-        padding: '30px',
+        position: 'absolute',
       }}
     >
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        alignItems="center"
-        justify="center"
-        style={{ minHeight: '8vh' }}
+      <Box
+        style={{
+          backgroundColor: '#194b8c',
+          left: 0,
+          right: 0,
+          bottom: 0,
+          position: 'relative',
+          width: '100%',
+          marginTop: 'calc(5% + 60px)',
+          padding: '30px',
+          justifyItems: 'center',
+          textAlign: 'center',
+        }}
+        position="sticky"
       >
-        <Grid item xs={12}>
-          <Typography style={{ color: 'white' }}>
-            Designed & Developed by Enter Name Here
-          </Typography>
-          <Typography style={{ color: 'white' }}>
-            {`Version ${pjson.version}`}
-          </Typography>
-        </Grid>
-      </Grid>
-    </Box>
+        <Container>
+          <Typography style={{ color: 'white' }}>© ONE STOP STARTUP</Typography>
+          <Typography style={{ color: 'white' }}>Designed & Developed by DREAMTEAM</Typography>
+        </Container>
+      </Box>
+    </footer>
   );
 }
