@@ -1,30 +1,65 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import {
-  Autocomplete, Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Container, Divider, Grid, IconButton, Paper, TextField, Typography,
+  Autocomplete,
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  Chip,
+  Container,
+  Divider,
+  Grid,
+  IconButton,
+  Paper,
+  TextField,
+  Typography,
 } from '@material-ui/core';
-import { SearchOutlined } from '@material-ui/icons';
+import { GitHub, LinkedIn, SearchOutlined } from '@material-ui/icons';
 import React, { useState } from 'react';
 
 function Recruitment() {
   const [searched, setSearched] = useState(false);
-  const employees = [{
-    name: 'John Doe', roles: 'Software Engineer', tags: ['Software Engineer', 'DevOps'], bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
-  },
-  {
-    name: 'Jane Doe', roles: 'Software Engineer', tags: ['Software Engineer', 'Marketing'], bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
-  },
-  {
-    name: 'Jane Doe', roles: 'Software Engineer', tags: ['Software Engineer', 'HR'], bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
-  },
-  {
-    name: 'Jane Doe', roles: 'Software Engineer', tags: ['Software Engineer'], bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
-  },
-  {
-    name: 'John Doe', roles: 'Software Engineer', tags: ['Software Engineer'], bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
-  },
-  {
-    name: 'Jane Doe', roles: 'Software Engineer', tags: ['Software Engineer'], bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
-  }];
+  const employees = [
+    {
+      name: 'John Doe',
+      roles: 'Software Engineer',
+      tags: ['Software Engineer', 'DevOps'],
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
+    },
+    {
+      name: 'Jane Doe',
+      roles: 'Software Engineer',
+      tags: ['Software Engineer', 'Marketing'],
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
+    },
+    {
+      name: 'Jane Doe',
+      roles: 'Software Engineer',
+      tags: ['Software Engineer', 'HR'],
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
+    },
+    {
+      name: 'Jane Doe',
+      roles: 'Software Engineer',
+      tags: ['Software Engineer'],
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
+    },
+    {
+      name: 'John Doe',
+      roles: 'Software Engineer',
+      tags: ['Software Engineer'],
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
+    },
+    {
+      name: 'Jane Doe',
+      roles: 'Software Engineer',
+      tags: ['Software Engineer'],
+      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis et tellus eu pellentesque. Curabitur nibh leo, vehicula at ante.',
+    },
+  ];
   return (
     <div>
       <Container>
@@ -46,12 +81,7 @@ function Recruitment() {
             <Button color="primary">Clear</Button>
           </Box>
         </Box>
-        <Box
-          paddingTop="2%"
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-        >
+        <Box paddingTop="2%" display="flex" flexDirection="column" justifyContent="center">
           <Paper>
             <Box display="flex" justifyContent="space-around" paddingBottom="2%" paddingTop="2%">
               <Autocomplete
@@ -112,39 +142,60 @@ function Recruitment() {
                   { id: 4, descr: 'Διδακτορικός Φοιτητής' },
                 ]}
                 getOptionLabel={(option) => option.descr}
-                renderInput={(params) => (
-                  <TextField {...params} variant="outlined" label="Άλλο" />
-                )}
+                renderInput={(params) => <TextField {...params} variant="outlined" label="Άλλο" />}
               />
             </Box>
           </Paper>
           {searched && (
-          <Box paddingTop="5%">
-            <Paper>
-              <Box display="flex" justifyContent="space-around" paddingTop="2%" paddingBottom="2%" paddingLeft="2%" paddingRight="2%">
-                <Grid container justifyContent="space-around" spacing={5}>
-                  {employees.map((employee, index) => (
-                    <Grid item xs={12} md={6} lg={4}>
-                      <Card style={{ borderRadius: '10px', borderColor: '#6abaf7', borderWidth: '2px' }} variant="outlined">
-                        <CardHeader title={employee.name} />
-                        <CardMedia height={250} component="img" image={`/recruitment/${index + 1}.jfif`} />
-                        <CardContent>
-                          {employee.tags.map((tag) => (<Chip label={tag} />))}
-                          <Divider />
-                          <br />
-                          {employee.bio}
-                        </CardContent>
-                        <CardActions>
-                          <Button>Learn More</Button>
-                        </CardActions>
-                      </Card>
-                    </Grid>
-                  ))}
-
-                </Grid>
-              </Box>
-            </Paper>
-          </Box>
+            <Box paddingTop="5%">
+              <Paper>
+                <Box
+                  display="flex"
+                  justifyContent="space-around"
+                  paddingTop="2%"
+                  paddingBottom="2%"
+                  paddingLeft="2%"
+                  paddingRight="2%"
+                >
+                  <Grid container justifyContent="space-around" spacing={5}>
+                    {employees.map((employee, index) => (
+                      <Grid item xs={12} md={6} lg={4}>
+                        <Card
+                          style={{
+                            borderRadius: '10px',
+                            borderColor: '#6abaf7',
+                            borderWidth: '2px',
+                          }}
+                          variant="outlined"
+                        >
+                          <CardHeader title={employee.name} />
+                          <CardMedia
+                            height={250}
+                            component="img"
+                            image={`/recruitment/${index + 1}.jfif`}
+                          />
+                          <CardContent>
+                            {employee.tags.map((tag) => (
+                              <Chip label={tag} />
+                            ))}
+                            <Divider />
+                            <br />
+                            {employee.bio}
+                          </CardContent>
+                          <CardActions>
+                            <Button>Learn More</Button>
+                            <Box display="flex" justifyContent="flex-end" width="65%">
+                              <IconButton href="https://www.linkedin.com"><LinkedIn color="primary" /></IconButton>
+                              <IconButton href="https://www.github.com"><GitHub color="primary" /></IconButton>
+                            </Box>
+                          </CardActions>
+                        </Card>
+                      </Grid>
+                    ))}
+                  </Grid>
+                </Box>
+              </Paper>
+            </Box>
           )}
         </Box>
       </Container>
