@@ -27,7 +27,7 @@ export default function header({ user, changeUserState }) {
   }
   return (
     <div style={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ height: 95, marginBottom: '10%' }}>
+      <AppBar position="static" style={{ height: 95, marginBottom: '5%' }}>
         <Toolbar style={{ height: 95, backgroundColor: '#194b8c' }}>
           <span>
             <Typography variant="h6" noWrap>
