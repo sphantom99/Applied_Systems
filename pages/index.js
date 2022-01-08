@@ -91,14 +91,16 @@ export default function Index() {
                     control={<Checkbox value="remember" color="primary" />}
                     label="Remember me"
                   />
-                  <Button
-                    type="submit"
-                    fullWidth
-                    variant="contained"
-                    style={{ backgroundColor: '#194b8c' }}
-                  >
-                    Sign In
-                  </Button>
+                  <Link href="/confirmYMS" passref style={{ 'text-decoration': 'none', color: 'white' }}>
+                    <Button
+                      type="submit"
+                      fullWidth
+                      variant="contained"
+                      style={{ backgroundColor: '#194b8c' }}
+                    >
+                      Sign In
+                    </Button>
+                  </Link>
                   <Grid container alignItems="center" justifyContent="center">
                     <Grid item>
                       <br />
