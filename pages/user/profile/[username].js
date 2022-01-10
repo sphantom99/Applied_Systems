@@ -11,21 +11,9 @@ import {
   TableCell,
 } from '@material-ui/core';
 import React from 'react';
-import { useRouter } from 'next/router';
-import getUserStatistics from '../../../src/lib/getUserStatistics';
-import Link from 'next/link'
-export async function getServerSideProps(context) {
-  let result;
-  try {
-    result = await getUserStatistics(context.params.username);
-    console.log(result);
-  } catch (err) {
-    console.log(err);
-  }
-  return { props: { result } };
-}
-export default function profile({ result }) {
-  const router = useRouter();
+import Link from 'next/link';
+
+export default function profile() {
   return (
     <Container>
       <Card>
@@ -60,19 +48,21 @@ export default function profile({ result }) {
             </Table>
           </Box>
           <br />
-          <br />
-          <br />
+
           <Typography variant="h4" style={{ display: 'flex', alignSelf: 'flex-start' }}>
-            Statistics
+            Subscriptions
           </Typography>
           <Table>
             <TableRow>
-              <TableCell>Last Upload: </TableCell>
-              <TableCell>{result.lastUploadDate}</TableCell>
+              <TableCell>Subscription Type:</TableCell>
+              <TableCell>Standard(statistics included)</TableCell>
+              <TableCell>
+                <Button variant="contained">Change</Button>
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell style={{ borderBottom: 'none' }}>Total HARs Uploaded: </TableCell>
-              <TableCell style={{ borderBottom: 'none' }}>{result.totalUploads}</TableCell>
+              <TableCell style={{ borderBottom: 'none' }}>Next Payment due: </TableCell>
+              <TableCell style={{ borderBottom: 'none' }}>14/2/2022</TableCell>
             </TableRow>
           </Table>
         </CardContent>

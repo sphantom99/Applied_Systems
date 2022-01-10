@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Card, CardContent, CardHeader, Typography,
+  Card, CardContent,
 } from '@material-ui/core';
 import {
   LineChart,
@@ -61,12 +61,8 @@ const data = [
 export default function Finance() {
   return (
     <Card sx={{ width: 550, height: 400 }}>
-      <CardHeader>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary">
-          General Income
-        </Typography>
-      </CardHeader>
       <CardContent>
+        <h4>A demo of synchronized AreaCharts</h4>
         <LineChart
           width={500}
           height={300}

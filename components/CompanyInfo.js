@@ -6,6 +6,7 @@ import {
 
 const company = [
   { name: 'Title', value: 'One Stop Startup' },
+  { name: 'Name', value: 'Software and Marketing Services' },
   { name: 'Type', value: 'AE' },
   { name: 'Date of Creation', value: '20/12/2021' },
   { name: 'AFM', value: 'xxxxxxxx' },

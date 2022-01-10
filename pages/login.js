@@ -11,6 +11,8 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import Cookies from 'js-cookie';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">

@@ -1,10 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import {
-  Container, Box, Typography, Tabs, Tab,
+  Container, Box, Typography, Tabs, Tab, Grid, TextField, Button,
 } from '@material-ui/core';
 import React from 'react';
+import AddIcon from '@material-ui/icons/Add';
 import CompanyInfo from '../components/CompanyInfo';
 import Finance from '../components/Finance';
+import Finance1 from '../components/Finance1';
+import FinancePie from '../components/FinancePie';
 import Risk from '../components/Risk';
 
 function TabPanel(props) {
@@ -54,10 +57,51 @@ export default function financeRiskAssesment() {
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-            <CompanyInfo />
+            <Grid container>
+              <Grid item xs={5}>
+                <CompanyInfo />
+              </Grid>
+              <Grid item xs={7}>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    p: 1,
+                    m: 1,
+                    bgcolor: 'background.paper',
+                  }}
+                >
+                  <Typography>Add information about your company</Typography>
+                </Box>
+
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'space-evenly',
+                    p: 1,
+                    m: 1,
+                    bgcolor: 'background.paper',
+                  }}
+                >
+                  <TextField id="outlined-basic" label="Name" variant="outlined" />
+                  <TextField id="outlined-basic" label="Value" variant="outlined" />
+                  <Button type="submit">
+                    <AddIcon />
+                  </Button>
+                </Box>
+              </Grid>
+            </Grid>
           </TabPanel>
           <TabPanel value={value} index={1}>
-            <Finance />
+            <Grid container>
+              <Grid item xs={6}>
+                <Finance />
+                <FinancePie />
+              </Grid>
+              <Grid item xs={6}>
+                <Finance1 />
+              </Grid>
+            </Grid>
           </TabPanel>
           <TabPanel value={value} index={2}>
             <Risk />

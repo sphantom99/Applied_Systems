@@ -8,11 +8,12 @@ import {
 } from '@material-ui/core';
 import Link from 'next/link';
 import axios from 'axios';
-import router from 'next/router';
+import { useRouter } from 'next/router';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 export default function header({ user, changeUserState }) {
   const [anchorEl, setAnchorEl] = useState(null);
+  const router = useRouter();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -25,6 +26,7 @@ export default function header({ user, changeUserState }) {
     changeUserState(null);
     router.push('login');
   }
+  const currentPath = router.asPath;
   return (
     <div style={{ flexGrow: 1 }}>
       <AppBar position="static" style={{ height: 95, marginBottom: '5%' }}>
@@ -38,7 +40,7 @@ export default function header({ user, changeUserState }) {
               {' '}
             </Typography>
           </span>
-          {user && (
+          {currentPath !== '/' && currentPath !== '/register' && currentPath !== '/confirmYMS' && (
             <Box style={{ marginLeft: '75%' }}>
               <Button
                 color="inherit"
