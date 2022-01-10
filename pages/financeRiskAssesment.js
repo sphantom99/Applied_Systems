@@ -6,6 +6,8 @@ import React from 'react';
 import AddIcon from '@material-ui/icons/Add';
 import CompanyInfo from '../components/CompanyInfo';
 import Finance from '../components/Finance';
+import Finance1 from '../components/Finance1';
+import FinancePie from '../components/FinancePie';
 import Risk from '../components/Risk';
 
 function TabPanel(props) {
@@ -91,7 +93,15 @@ export default function financeRiskAssesment() {
             </Grid>
           </TabPanel>
           <TabPanel value={value} index={1}>
-            <Finance />
+            <Grid container>
+              <Grid item xs={6}>
+                <Finance />
+                <FinancePie />
+              </Grid>
+              <Grid item xs={6}>
+                <Finance1 />
+              </Grid>
+            </Grid>
           </TabPanel>
           <TabPanel value={value} index={2}>
             <Risk />

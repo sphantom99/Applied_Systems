@@ -23,50 +23,137 @@ import {
   ReferenceLine,
 } from 'recharts';
 
-const data = [
+const fire = [
   {
     name: 'Jan',
-    uv: 4000,
-    pv: 2400,
+    pv: 800,
     amt: 2400,
   },
   {
     name: 'Feb',
-    uv: 3000,
-    pv: 1398,
+    pv: 900,
     amt: 2210,
   },
   {
     name: 'Mar',
-    uv: 2000,
-    pv: 9800,
+    pv: 1000,
     amt: 2290,
   },
   {
     name: 'Apr',
-    uv: 2780,
-    pv: 3908,
+    pv: 1000,
     amt: 2000,
   },
   {
     name: 'May',
-    uv: 1890,
-    pv: 4800,
+    pv: 1500,
     amt: 2181,
   },
   {
     name: 'Jun',
-    uv: 2390,
-    pv: 3800,
+    pv: 1700,
     amt: 2500,
   },
   {
     name: 'Jul',
-    uv: 3490,
-    pv: 4300,
+    pv: 2000,
     amt: 2100,
   },
+  {
+    name: 'Aug',
+    pv: 2500,
+    amt: 2210,
+  },
+  {
+    name: 'Sep',
+    pv: 1900,
+    amt: 2290,
+  },
+  {
+    name: 'Oct',
+    pv: 1000,
+    amt: 2000,
+  },
+  {
+    name: 'Nov',
+    pv: 1000,
+    amt: 2181,
+  },
+  {
+    name: 'Dec',
+    pv: 1000,
+    amt: 2500,
+  },
 ];
+
+const behavior = [
+  {
+    name: 'Jan',
+    pv: 30,
+    amt: 2400,
+  },
+  {
+    name: 'Feb',
+    pv: 30,
+    amt: 2210,
+  },
+  {
+    name: 'Mar',
+    pv: 50,
+    amt: 2290,
+  },
+  {
+    name: 'Apr',
+    pv: 70,
+    amt: 2000,
+  },
+  {
+    name: 'May',
+    pv: 79,
+    amt: 2181,
+  },
+  {
+    name: 'Jun',
+    pv: 84,
+    amt: 2500,
+  },
+  {
+    name: 'Jul',
+    pv: 100,
+    amt: 2100,
+  },
+  {
+    name: 'Aug',
+    pv: 100,
+    amt: 2210,
+  },
+  {
+    name: 'Sep',
+    pv: 96,
+    amt: 2290,
+  },
+  {
+    name: 'Oct',
+    pv: 60,
+    amt: 2000,
+  },
+  {
+    name: 'Nov',
+    pv: 70,
+    amt: 2181,
+  },
+  {
+    name: 'Dec',
+    pv: 100,
+    amt: 2500,
+  },
+];
+
+const dict = {
+  1: behavior,
+  2: fire,
+};
+
 export default function Risk() {
   const [sector, setSector] = useState('');
 
@@ -74,7 +161,7 @@ export default function Risk() {
     setSector(event.target.value);
   };
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 150 }}>
       <Grid container spacing={2}>
         <Grid item xs={3}>
           <FormControl fullWidth>
@@ -99,7 +186,7 @@ export default function Risk() {
         </Grid>
         <Grid item xs={8}>
           {sector !== '' && (
-            <Card sx={{ width: 550, height: 400 }}>
+            <Card sx={{ width: 600, height: 400 }}>
               <CardHeader>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary">
                   General Income
@@ -107,9 +194,9 @@ export default function Risk() {
               </CardHeader>
               <CardContent>
                 <LineChart
-                  width={500}
+                  width={600}
                   height={300}
-                  data={data}
+                  data={dict[sector]}
                   margin={{
                     top: 20,
                     right: 50,
@@ -122,8 +209,9 @@ export default function Risk() {
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <ReferenceLine x="Mar" stroke="red" label="Max Income" />
-                  <ReferenceLine y={9800} label="Max" stroke="red" />
+                  <ReferenceLine x="Mar" stroke="red" label="First Incident" />
+                  <ReferenceLine x="Sep" stroke="red" label="Predicted" />
+                  <ReferenceLine y={1764} stroke="red" label="High Fire Risk" />
                   <Line type="monotone" dataKey="pv" stroke="#8884d8" />
                   <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
                 </LineChart>
