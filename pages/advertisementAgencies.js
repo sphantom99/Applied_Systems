@@ -13,6 +13,8 @@ function advertisementAgencies() {
       <Container>
         {advertisingAgencies.map((_, index) => (
           <Box paddingBottom="5%">
+            <Box alignItems={'center'} alignContent={'center'} textAlign={'center'} paddingBottom={'3%'}>
+            <Typography variant="h5">Company XYZ</Typography></Box>
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
                 <Typography>
