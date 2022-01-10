@@ -23,12 +23,12 @@ export default function ForeasForm() {
         <br />
         <Grid container spacing={1} style={{ marginLeft: 10 }}>
           <Grid item xs={3}>
-            <TextField style={{ marginBottom: 20, width: '75%' }} id="title" label="Τίτλος Χρηματοδότησης" type="text" variant="standard" />
+            <TextField style={{ marginBottom: 20, width: '75%' }} id="title" label="Τίτλος Χρηματοδότησης" type="text" variant="outlined" />
           </Grid>
           <Grid item xs={3}>
-            <TextField style={{ marginBottom: 20, width: '75%' }} id="money" label="Ποσό Χρηματοδότησης" type="number" variant="standard" />
+            <TextField style={{ marginBottom: 20, width: '75%' }} id="money" label="Ποσό Χρηματοδότησης" type="number" variant="outlined" />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={3} style={{ marginTop: 17 }}>
             <InputLabel id="typeLabel">Τύπος Εταιρείας</InputLabel>
             <Select
               style={{ marginBottom: 20, width: '75%' }}
@@ -44,21 +44,19 @@ export default function ForeasForm() {
               <MenuItem value={6}>Ιατρική</MenuItem>
             </Select>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={8}>
             <TextField
               id="paragraph"
               multiline
-              variant="standard"
-              rows={1}
-              maxRows={8}
+              variant="outlined"
+              rows={5}
               label="Περιγραφή Χρηματοδότησης"
-              style={{ width: '75%' }}
+              style={{ width: '100%' }}
             />
           </Grid>
-          <Grid item xs={3}>
-            <Button style={{ marginLeft: 1500, marginBottom: 10 }} variant="contained">Αναρτηση Χρηματοδοτησης</Button>
-          </Grid>
+
         </Grid>
+        <Button style={{ marginBottom: 10, marginLeft: 20 }} variant="contained">Αναρτηση Χρηματοδοτησης</Button>
       </Card>
     </Container>
   );

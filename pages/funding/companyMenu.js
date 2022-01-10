@@ -121,7 +121,6 @@ export default function CompanyMenu() {
             checkboxSelection
             onSelectionModelChange={(newSelectionModel) => {
               setSelectionModel(newSelectionModel);
-              console.log(newSelectionModel);
             }}
           />
         </div>
