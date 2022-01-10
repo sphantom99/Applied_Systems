@@ -22,14 +22,12 @@ export default function FundingForm() {
       >
 
         <br />
-        <Grid container spacing={1} style={{ marginLeft: 10 }}>
+        <Grid container spacing={0.5} style={{ marginLeft: 10 }}>
           <Grid item xs={3}>
-            <TextField style={{ marginBottom: 20, width: '75%' }} id="money" label="Χρηματικό ποσό Δανείου" type="number" variant="standard" />
+            <TextField style={{ marginBottom: 20, width: '75%' }} id="money" label="Χρηματικό ποσό Δανείου" type="number" variant="outlined" />
           </Grid>
-          <Grid item xs={3}>
-            <TextField style={{ marginBottom: 20, width: '75%' }} id="duration" label="Διάρκεια Μίσθωσης (Σε Χρόνια)" variant="standard" />
-          </Grid>
-          <Grid item xs={3}>
+
+          <Grid item xs={3} style={{ marginTop: 17 }}>
             <InputLabel id="misthoma-label">Καταβολή Μισθώματος</InputLabel>
             <Select
               style={{ marginBottom: 20, width: '75%' }}
@@ -42,7 +40,7 @@ export default function FundingForm() {
               <MenuItem value={3}>Ετήσια</MenuItem>
             </Select>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={3} style={{ marginTop: 17 }}>
             <InputLabel id="charging-label">Τρόπος Καταβολής</InputLabel>
             <Select
               style={{ marginBottom: 20, width: '75%' }}
@@ -55,7 +53,7 @@ export default function FundingForm() {
               <MenuItem value={3}>Πληρωμή σε Κατάστημα</MenuItem>
             </Select>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={3} style={{ marginTop: 17 }}>
             <InputLabel id="usage-label">Χρήση Δανείου για:</InputLabel>
             <Select
               style={{ marginBottom: 20, width: '75%' }}
@@ -69,6 +67,9 @@ export default function FundingForm() {
             </Select>
           </Grid>
           <Grid item xs={3}>
+            <TextField style={{ marginBottom: 20, width: '75%' }} id="duration" label="Διάρκεια Μίσθωσης (Σε Χρόνια)" variant="outlined" />
+          </Grid>
+          <Grid item xs={3} style={{ marginTop: 17 }}>
             <InputLabel id="bank-label">Τράπεζα</InputLabel>
             <Select
               style={{ marginBottom: 20, width: '75%' }}
@@ -82,19 +83,18 @@ export default function FundingForm() {
               <MenuItem value={4}>Εθνική Τράπεζα</MenuItem>
             </Select>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={5}>
             <TextField
               id="paragraph"
               multiline
-              variant="standard"
-              rows={1}
-              maxRows={8}
+              variant="outlined"
+              rows={5}
               label="Γράψτε λίγα λόγια για τους λόγους που θα θέλατε το δάνειο"
               style={{ width: '100%' }}
             />
           </Grid>
-          <Grid item xs={3}>
-            <Button style={{ marginLeft: 60 }} variant="contained">Υποβολη Αιτησης</Button>
+          <Grid item xs={4}>
+            <Button style={{ marginBottom: 20, marginLeft: 60 }} variant="contained">Υποβολη Αιτησης</Button>
           </Grid>
         </Grid>
 
