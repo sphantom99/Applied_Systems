@@ -45,7 +45,7 @@ const clearCoordinates = [
   { lat: 38.215077447853716, long: 21.73439262611655, name: 'some random name3' },
 ];
 
-export default function lineMap() {
+export default function map() {
   const [viewport, setViewport] = React.useState({
     longitude: 21.823,
     latitude: 38.314,
