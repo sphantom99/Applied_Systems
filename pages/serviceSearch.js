@@ -16,7 +16,7 @@ import {
   TextField,
   Typography,
 } from '@material-ui/core';
-import { GitHub, LinkedIn, SearchOutlined } from '@material-ui/icons';
+import { SearchOutlined } from '@material-ui/icons';
 import React, { useState } from 'react';
 
 function serviceSearch() {
@@ -142,7 +142,9 @@ function serviceSearch() {
                   { id: 4, descr: 'Μηνιαία' },
                 ]}
                 getOptionLabel={(option) => option.descr}
-                renderInput={(params) => <TextField {...params} variant="outlined" label="Συνεργασία" />}
+                renderInput={(params) => (
+                  <TextField {...params} variant="outlined" label="Συνεργασία" />
+                )}
               />
             </Box>
           </Paper>

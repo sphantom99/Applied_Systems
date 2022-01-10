@@ -15,6 +15,8 @@ import { createContext, useState, useEffect } from 'react';
 const clientSideEmotionCache = createEmotionCache();
 export const authContext = createContext();
 import { useRouter } from 'next/router';
+import chat from '../components/Chat';
+import Chat from '../components/Chat';
 export default function MyApp(props) {
   const [userState, setuserState] = useState(null);
 
@@ -41,6 +43,7 @@ export default function MyApp(props) {
             }}
           >
             <Component {...pageProps} />
+            <Chat />
           </body>
 
           <AppFooter />
