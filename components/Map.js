@@ -48,7 +48,7 @@ const clearCoordinates = [
   { lat: 38.81447853716, long: 21.7362611655, name: 'some random name6' },
 ];
 
-export default function map() {
+export default function Map() {
   const [viewport, setViewport] = React.useState({
     longitude: 21.823,
     latitude: 38.314,
@@ -58,8 +58,8 @@ export default function map() {
   return (
     <ReactMapGL
       {...viewport}
-      width="100vw"
-      height="100vh"
+      width="700px"
+      height="610px"
       onViewportChange={setViewport}
       mapboxApiAccessToken={mapBoxToken}
     >

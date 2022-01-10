@@ -10,7 +10,7 @@ export default function AppFooter() {
         left: 0,
         right: 0,
         bottom: 0,
-        position: 'absolute',
+        position: 'relative',
       }}
     >
       <Box
@@ -30,7 +30,7 @@ export default function AppFooter() {
       >
         <Container>
           <Typography style={{ color: 'white' }}>© ONE STOP STARTUP</Typography>
-          <Typography style={{ color: 'white' }}>Designed & Developed by DREAMTEAM</Typography>
+          <Typography style={{ color: 'white' }}>Designed & Developed by ANONYMOUS</Typography>
         </Container>
       </Box>
     </footer>
