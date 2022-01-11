@@ -23,19 +23,19 @@ const data = [
     fullMark: 150,
   },
   {
-    subject: 'Geography',
+    subject: 'IT',
     A: 99,
     B: 100,
     fullMark: 150,
   },
   {
-    subject: 'Physics',
+    subject: 'Safety',
     A: 85,
     B: 90,
     fullMark: 150,
   },
   {
-    subject: 'History',
+    subject: 'Health Insurance',
     A: 65,
     B: 85,
     fullMark: 150,

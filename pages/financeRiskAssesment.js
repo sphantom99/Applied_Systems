@@ -9,6 +9,8 @@ import Finance from '../components/Finance';
 import Finance1 from '../components/Finance1';
 import FinancePie from '../components/FinancePie';
 import Risk from '../components/Risk';
+import Population from '../components/Population';
+import PopulationPredicted from '../components/PopulationPredicted';
 
 function TabPanel(props) {
   const {
@@ -54,6 +56,7 @@ export default function financeRiskAssesment() {
               <Tab label="Company information" {...a11yProps(0)} />
               <Tab label="Finance" {...a11yProps(1)} />
               <Tab label="Risk Assesment" {...a11yProps(2)} />
+              <Tab label="Startup Population Greece" {...a11yProps(3)} />
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
@@ -105,6 +108,16 @@ export default function financeRiskAssesment() {
           </TabPanel>
           <TabPanel value={value} index={2}>
             <Risk />
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            <Grid container>
+              <Grid item xs={7}>
+                <Population />
+              </Grid>
+              <Grid item xs={5}>
+                <PopulationPredicted />
+              </Grid>
+            </Grid>
           </TabPanel>
         </Box>
       </Container>

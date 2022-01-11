@@ -209,8 +209,13 @@ export default function Risk() {
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <ReferenceLine x="Mar" stroke="red" label="First Incident" />
-                  <ReferenceLine x="Sep" stroke="red" label="Predicted" />
+
+                  {sector === 2 && (
+                    <>
+                      <ReferenceLine x="Mar" stroke="red" label="First Incident" />
+                      <ReferenceLine x="Sep" stroke="red" label="Predicted" />
+                    </>
+                  )}
                   <ReferenceLine y={1764} stroke="red" label="High Fire Risk" />
                   <Line type="monotone" dataKey="pv" stroke="#8884d8" />
                   <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
