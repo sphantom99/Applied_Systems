@@ -1,44 +1,42 @@
-# Next.js example
+<h1 align="center">One Stop Startup</h1>
 
-## How to use
+## Demo 
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
+### Login screen ###
+![GitHub Logo](/images/Login.png)
 
-<!-- #default-branch-switch -->
 
-```sh
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/next | tar -xz --strip=2  material-ui-next/examples/nextjs
-cd nextjs
-```
+### Register screen ###
+![GitHub Logo](/images/Register.png)
 
-Install it and run:
 
-```sh
-npm install
-npm run dev
-```
+### Confirm YMS information screen ###
+![GitHub Logo](/images/ConfirmYMS.png)
 
-or:
 
-<!-- #default-branch-switch -->
+### Advertisement Agencies screen ###
+![GitHub Logo](/images/AdvertisementAgencies.png)
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui-org/material-ui/tree/next/examples/nextjs)
 
-## The idea behind the example
+### Finance Risk Assesment screen ###
+![GitHub Logo](/images/FinanceRiskAssesment.png )
 
-The project uses [Next.js](https://github.com/zeit/next.js), which is a framework for server-rendered React apps.
-It includes `@material-ui/core` and its peer dependencies, including `emotion`, the default style engine in Material-UI v5.
-If you prefer, you can [use styled-components instead](https://next.material-ui.com/guides/interoperability/#styled-components).
 
-## The link component
+### Recruitment screen ###
+![GitHub Logo](/images/Recruitment.png )
 
-Next.js has [a custom Link component](https://nextjs.org/docs/api-reference/next/link).
-The example folder provides adapters for usage with Material-UI.
-More information [in the documentation](https://next.material-ui.com/guides/routing/#next-js).
 
-## What's next?
+### Service Search screen ###
+![GitHub Logo](/images/ServiceSearch.png)
 
-<!-- #default-branch-switch -->
 
-You now have a working example project.
-You can head back to the documentation, continuing browsing it from the [templates](https://next.material-ui.com/getting-started/templates/) section.
+### company Menu screen ###
+![GitHub Logo](/images/companyMenu.png)
+
+
+### foreas Form screen ###
+![GitHub Logo](/images/foreasForm.png )
+
+
+### funding Form screen ###
+![GitHub Logo](/images/fundingForm.png )
